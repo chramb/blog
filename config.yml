@@ -1,4 +1,3 @@
-baseURL: "/"
 title: Chris's Blog
 paginate: 5
 
@@ -10,6 +9,7 @@ enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
+enableEmoji: true
 
 minify:
   disableXML: true
@@ -21,9 +21,9 @@ outputs:
     - JSON
 
 params:
+  displayFullLangName: true
   env: production
   title: Chris's Blog
-  description: "My blog in which I write about tech stuff and whatever else I find interesing"
   keywords: [Blog, Homelab, Linux]
   author: "Chris"
   DateFormat: "2 Jan 2006"
@@ -50,10 +50,6 @@ params:
   label:
     text: "Chris's Blog"
 
-  homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog, I hope you enjoy your stay.
-
   socialIcons:
     - name: GitHub
       url: "https://github.com/chramb"
@@ -77,21 +73,67 @@ params:
 
 languages:
   en:
-    languageName: "English"
+    languageName: ":uk:"
+    languageAltTitle: "English (English)"
+
+    description: "My blog in which I write about tech stuff and whatever else I find interesing"
+    homeInfoParams:
+      Title: "Hi there \U0001F44B"
+      Content: Welcome to my blog, I hope you enjoy your stay.
     menu:
       main:
         - identifier: search
           name: Search
-          url: search/
+          url: /search/
           weight: 10
         - identifier: tags
           name: Tags
-          url: tags/
+          url: /tags/
+          weight: 20
+        - identifier: archive
+          name: Posts
+          url: /archives/
           weight: 30
         - identifier: about
           name: About
-          url: about/
+          url: /about/
           weight: 40
+  pl:
+    author: "Krzysztof"
+    languageName: ":poland:"
+    languageAltTitle: "Polski (Polish)"
+    description: "My blog in which I write about tech stuff and whatever else I find interesing"
+    homeInfoParams:
+      Title: "Hej \U0001F44B"
+      Content: Witaj na moim blogu.
+    menu:
+      main:
+        - identifier: search
+          name: Szukaj
+          url: /search/
+          weight: 10
+        - identifier: tags
+          name: Tagi
+          url: /tags/
+          weight: 20
+        - identifier: about
+          name: O mnie
+          url: /about/
+          weight: 40
+        - identifier: archives
+          name: Wpisy
+          url: /archives/
+          weight: 30
+  ru:
+    languageName: " " # ":ru"
+    languageAltTitle: "Русский (Russian)"
+    homeInfoParams:
+      Title: "404 Не Найдено"
+  es:
+    languageName: " " # ":es:"
+    languageAltTitle: "Español (Spanish)"
+    homeInfoParams:
+      Title: "404 No encontrado"
 
 pygmentsUseClasses: true
 markup:

@@ -125,16 +125,6 @@ languages:
           name: Wpisy
           url: /archives/
           weight: 30
-  ru:
-    languageName: " " # ":ru"
-    languageAltTitle: "Русский (Russian)"
-    homeInfoParams:
-      Title: "404 Не Найдено"
-  es:
-    languageName: " " # ":es:"
-    languageAltTitle: "Español (Spanish)"
-    homeInfoParams:
-      Title: "404 No encontrado"
 
 pygmentsUseClasses: true
 markup:
